@@ -5,6 +5,7 @@ import {
   Image,
   TextInput,
   Button,
+  ScrollView,
 } from "react-native";
 import React, { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -14,6 +15,8 @@ import {
   MagnifyingGlassIcon as SearchIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -54,10 +57,33 @@ const HomeScreen = () => {
         </View>
         <AdjustmentsVerticalIcon color={REACT_NATIVE_COLOR} />
       </View>
+      <ScrollView
+        className="bg-gray-100"
+        contentContainerStyle={{
+          paddingBottom: 100,
+        }}
+      >
+        <Categories />
+        <FeaturedRow
+          id="123"
+          title="Featured"
+          description="Paid placements from our partners"
+        />
+        <FeaturedRow
+          id="1234"
+          title="Tasty Discounts"
+          description="Everyone's been enjoying these juicy discounts!"
+        />
+        <FeaturedRow
+          id="1235"
+          title="Offers near you"
+          description="Why not support your local restaurant tonight!"
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
 export default HomeScreen;
 
-const REACT_NATIVE_COLOR = "#00CCBB";
+export const REACT_NATIVE_COLOR = "#00CCBB";
