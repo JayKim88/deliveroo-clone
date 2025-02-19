@@ -1,3 +1,4 @@
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import {
   View,
   Text,
@@ -7,7 +8,6 @@ import {
   Button,
   ScrollView,
 } from "react-native";
-import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   ChevronDownIcon,
@@ -15,9 +15,11 @@ import {
   MagnifyingGlassIcon as SearchIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
+
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import sanityClient from "../sanity";
+import { REACT_NATIVE_COLOR } from "../constants/colors";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -98,5 +100,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
-export const REACT_NATIVE_COLOR = "#00CCBB";

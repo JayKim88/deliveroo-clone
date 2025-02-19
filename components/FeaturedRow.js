@@ -1,9 +1,10 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
-import { REACT_NATIVE_COLOR } from "../screens/HomeScreen";
+
 import RestaurantCard from "./RestaurantCard";
 import sanityClient from "../sanity";
+import { REACT_NATIVE_COLOR } from "../constants/colors";
 
 const FeaturedRow = ({ id, title, description }) => {
   const [restaurants, setRestaurants] = useState([]);
