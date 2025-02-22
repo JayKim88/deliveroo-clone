@@ -111,7 +111,12 @@ const BasketScreen = () => {
           <View className="flex-row justify-between">
             <Text className="text-gray-400">Subtotal</Text>
             <Text className="text-gray-400">
-              {formatCurrency({ amount: basketTotal, code: "GBP" })[0]}
+              {
+                formatCurrency({
+                  amount: basketTotal?.toFixed(1),
+                  code: "GBP",
+                })[0]
+              }
             </Text>
           </View>
 
@@ -125,7 +130,12 @@ const BasketScreen = () => {
           <View className="flex-row justify-between">
             <Text>Order Total</Text>
             <Text className="font-extrabold">
-              {formatCurrency({ amount: basketTotal + 5.99, code: "GBP" })[0]}
+              {
+                formatCurrency({
+                  amount: (basketTotal + 5.99).toFixed(1),
+                  code: "GBP",
+                })[0]
+              }
             </Text>
           </View>
 

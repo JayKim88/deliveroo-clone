@@ -27,7 +27,7 @@ const BasketIcon = () => {
           View Basket
         </Text>
         <Text className="text-lg text-white font-extrabold">
-          {formatCurrency({ amount: basketTotal, code: "GBP" })[0]}
+          {formatCurrency({ amount: basketTotal?.toFixed(1), code: "GBP" })[0]}
         </Text>
       </TouchableOpacity>
     </View>
