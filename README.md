@@ -1,4 +1,4 @@
-# Deliveroo clone
+# Deliveroo -  Food delivery and shopping app
 
 ## Stacks
 
